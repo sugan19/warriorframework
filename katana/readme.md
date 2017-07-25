@@ -32,3 +32,63 @@ added in its upcoming releases.
 If there is only one server available and multiple users want to run Warrior UI on the same server,
 then each user should download a copy of warriorframework git repository and save it in a unique
 location on their system.
+
+Front End Documentation:
+========================
+
+
+
+## Events:
+
+### Click Event:
+
+The **katana-click** attribute will will add a click event that calls a given method by name, and passes 
+the elem as a jquery object to the method as "this".
+
+#### Example:
+
+##### HTML
+```HTML
+<div katana-click="methodName"></div>
+```
+##### JS
+```javascript
+methodName: function(){
+  $divElement = this;
+},
+```
+
+
+## Opening New Tab:
+
+Load content through a html page
+
+#### Example: 
+
+In **HTML** format your div like this,
+```HTML
+<div katana-click="templateAPI.load" url="/configuration"></div>
+```
+Or directly in **JS** call,
+```javascript
+katana.templateAPI.load( url );
+```
+
+## popup:
+
+### open a popup
+
+#### Example: 
+
+##### JS
+```javascript
+katana.generatePopup( title, content );
+```
+### close a popup
+
+#### Example: 
+
+##### JS
+```javascript
+katana.closePopup( popup( option to close a diffrent popup ) );
+```
