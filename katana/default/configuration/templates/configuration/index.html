@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
 <body>
-
-<div>{{ data }}</div>
-
+	<div class="form columns-1">
+		<form>
+			{% for field in fields %}
+				<div class="field">
+					<span class="title">{{ field.name }}</span>
+					<input type="text" title=" {{ field.tip }} " value="{{ field.value }}" placeholder="{{ field.name }}">
+				</div>
+			{% endfor %}
+		</form>
+	</div>
 </body>
-</html>
